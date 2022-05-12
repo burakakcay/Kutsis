@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "394954333022",
+    "project_id": "kutsis-b0fd4",
+    "storage_bucket": "kutsis-b0fd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394954333022:android:39342f37e25ab91490cdcf",
+        "android_client_info": {
+          "package_name": "com.example.kutsis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394954333022-u18ibhj9q91c75riun0sie9spto65okk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAM14OB6hCq7b1aP5mU81lFW0oVlhIq1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394954333022-u18ibhj9q91c75riun0sie9spto65okk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

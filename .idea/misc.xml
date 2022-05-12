@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Can/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_main.xml" value="0.2259963768115942" />
+        <entry key="..\:/Users/Can/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_qractivity.xml" value="0.2259963768115942" />
+        <entry key="..\:/Users/Can/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_register.xml" value="0.2259963768115942" />
+        <entry key="..\:/Users/Can/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_secim.xml" value="0.2259963768115942" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/drawable/kutsis_logo.xml" value="0.1" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/layout/activity_main.xml" value="0.11666666666666667" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/layout/activity_register.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/layout/activity_select.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/layout/activity_selection.xml" value="0.34782608695652173" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/layout/fragment_profile.xml" value="0.23369565217391305" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/layout/fragment_settings.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Bozulabilir123/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Deneme123/app/src/main/res/layout/activity_main.xml" value="0.23369565217391305" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Deneme123/app/src/main/res/layout/activity_register.xml" value="0.34782608695652173" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Deneme123/app/src/main/res/layout/fragment_home.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Deneme123/app/src/main/res/layout/fragment_settings.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/drawable/ic_baseline_settings.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_qractivity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_secim.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/drawable/gradient_background.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.3295" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.3675" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/activity_main.xml" value="0.14878892733564014" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/activity_qractivity.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/activity_secim.xml" value="0.1" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/activity_selection.xml" value="0.1" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/fragment_dashboard.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/fragment_notifications.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/layout/fragment_userdetails.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/zeki Kutsis-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/mehme/AndroidStudioProjects/Kutsis/app/src/main/res/font/comfortaa_light.xml" value="0.1911073108165883" />
+        <entry key="..\:/Users/mehme/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_login.xml" value="0.16631038905515177" />
+        <entry key="..\:/Users/mehme/AndroidStudioProjects/Kutsis/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/mehme/AndroidStudioProjects/Kutsis/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/mehme/AndroidStudioProjects/Kutsis/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/mehme/AndroidStudioProjects/Kutsis/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
