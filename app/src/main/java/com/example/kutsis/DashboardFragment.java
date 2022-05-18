@@ -25,7 +25,7 @@ public class DashboardFragment extends Fragment {
         return view;
     }
     private void initComponents(){
-        userDetails = (TextView) view.findViewById(R.id.lblUsername);
+        //userDetails = (TextView) view.findViewById(R.id.lblUsername);
     }
 
 }
