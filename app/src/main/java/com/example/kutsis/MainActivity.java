@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser currentUser) {
         if (currentUser != null) {
             Toast.makeText(this, currentUser.getEmail() + " giriş yaptı", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, SelectionActivity.class);
+            Intent intent = new Intent(this, SecimActivity.class);
             intent.putExtra("user", currentUser);
             startActivity(intent);
         }

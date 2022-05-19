@@ -21,6 +21,7 @@ import com.google.zxing.Result;
 import java.util.ArrayList;
 
 public class QRActivity extends AppCompatActivity {
+
     private CodeScanner mCodeScanner;
     public static final String MESSAGE_LIBRARYID = "com.example.kutsis.LIBRARYID";
 
@@ -42,7 +43,7 @@ public class QRActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent intent = new Intent(QRActivity.this, SecimActivity.class);
-                        intent.putExtra(MESSAGE_LIBRARYID,result.getText());
+                        intent.putExtra(MESSAGE_LIBRARYID, result.getText());
                         startActivity(intent);
                     }
                 });
@@ -98,8 +99,6 @@ public class QRActivity extends AppCompatActivity {
                         intent.setData(uri);
                         startActivity(intent);
                     }
-
-
                 }
             }
         }
