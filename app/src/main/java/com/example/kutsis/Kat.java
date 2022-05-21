@@ -1,7 +1,8 @@
 package com.example.kutsis;
 
+import java.io.Serializable;
 
-public class Kat {
+public class Kat implements Serializable {
     private long id;
     private String adi;
     private int logo;
@@ -15,7 +16,6 @@ public class Kat {
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
@@ -23,7 +23,6 @@ public class Kat {
     public String getAdi() {
         return adi;
     }
-
     public void setAdi(String adi) {
         this.adi = adi;
     }
@@ -31,7 +30,6 @@ public class Kat {
     public int getLogo() {
         return logo;
     }
-
     public void setLogo(int logo) {
         this.logo = logo;
     }

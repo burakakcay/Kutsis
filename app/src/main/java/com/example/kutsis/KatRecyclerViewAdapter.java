@@ -46,5 +46,4 @@ public class KatRecyclerViewAdapter extends RecyclerView.Adapter<KatRecyclerView
     public int getItemCount() {
         return katListesi.size();
     }
-
 }

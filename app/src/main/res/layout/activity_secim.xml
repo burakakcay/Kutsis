@@ -19,8 +19,8 @@
         android:layout_marginBottom="20dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/floorRecycleView"
-        android:layout_width="90dp"
+        android:id="@+id/RecycleView"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         app:layout_constraintStart_toStartOf="parent" />

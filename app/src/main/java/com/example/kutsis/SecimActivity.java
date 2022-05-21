@@ -1,22 +1,17 @@
 package com.example.kutsis;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.graphics.Point;
-import android.os.Bundle;
-import android.view.WindowManager;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import com.google.android.material.divider.MaterialDividerItemDecoration;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+
 
 public class SecimActivity extends AppCompatActivity {
 
@@ -42,27 +38,33 @@ public class SecimActivity extends AppCompatActivity {
     }
 
     private void loadData() {
-        ArrayList<Kat> katListesi = new ArrayList<>();
 
-        katListesi.add(new Kat(2, "Kat 2", R.drawable.ic_settings));
-        katListesi.add(new Kat(3, "Kat 3", R.drawable.ic_profile));
-        katListesi.add(new Kat(4, "Kat 4", R.drawable.ic_settings));
-        katListesi.add(new Kat(5, "Kat 5", R.drawable.ic_profile));
-        katListesi.add(new Kat(6, "Kat 6", R.drawable.ic_settings));
-        katListesi.add(new Kat(7, "Kat 7", R.drawable.ic_profile));
+//        ArrayList<Kat> katListesi = new ArrayList<>();
+//        katListesi.add(new Kat(2, "Kat 2", R.drawable.ic_settings));
+//        katListesi.add(new Kat(3, "Kat 3", R.drawable.ic_profile));
+//        katListesi.add(new Kat(4, "Kat 4", R.drawable.ic_settings));
+//        katListesi.add(new Kat(5, "Kat 5", R.drawable.ic_profile));
+//        katListesi.add(new Kat(6, "Kat 6", R.drawable.ic_settings));
+//        katListesi.add(new Kat(7, "Kat 7", R.drawable.ic_profile));
+
+        ArrayList<Table> tableList = new ArrayList<>();
+
+
+        tableList.add(new Table(1, false));
+        tableList.add(new Table(2, true));
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(false);
+        recyclerView.setHasFixedSize(true);
 
-        KatRecyclerViewAdapter adapter = new KatRecyclerViewAdapter(katListesi);
+        TableRecyclerViewAdapter adapter = new TableRecyclerViewAdapter(tableList);
         recyclerView.setAdapter(adapter);
 
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
     }
 
     private void initComponents() {
-        recyclerView = findViewById(R.id.floorRecycleView);
+        recyclerView = findViewById(R.id.RecycleView);
         textView = findViewById(R.id.textView);
     }
 
