@@ -21,6 +21,12 @@
     <string name="no">Hayır</string>
     <string name="yes">Evet</string>
     <string name="Logout">Çıkış yap</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chooseLibrary">Kütüphane seçiniz:</string>
+    <string name="ourLibraries">Kütüphanelerimiz:</string>
+    <string name="error_invalid_email">Geçersiz email</string>
+    <string name="error_invalid_password">Geçersiz şifre</string>
+    <string name="user_doesnt_exist">Geçersiz kullanıcı</string>
+    <string name="error_weak_password">Zayıf şifre. Lütfen 6 veya daha fazla karakter içeren bir şifre girin.</string>
+    <string name="error_user_exists">Bu kullanıcı zaten bulunuyor. Lütfen giriş yapmayı deneyin.</string>
 </resources>

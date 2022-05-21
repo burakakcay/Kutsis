@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,6 +15,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -21,6 +25,8 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private TextInputLayout emailWrapper,passwordWrapper;
     private Button registerBtn;
+    private static final String TAG = "RegisterActivity";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +43,6 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String eposta = emailWrapper.getEditText().getText().toString();
                 String sifre = passwordWrapper.getEditText().getText().toString();
-                checkInputs(eposta, sifre);
-
 
                 mAuth.createUserWithEmailAndPassword(eposta, sifre)
                         .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
@@ -51,20 +55,25 @@ public class RegisterActivity extends AppCompatActivity {
                                     startActivity(intent);
                                 }
                                 else {
-                                    Toast.makeText(RegisterActivity.this, "Kayıt başarısız.", Toast.LENGTH_SHORT).show();
-                                }
+                                    emailWrapper.setError(null);
+                                    passwordWrapper.setError(null);
+
+                                    try {
+                                        throw task.getException();
+                                    }
+                                    catch(FirebaseAuthUserCollisionException e) {
+                                        emailWrapper.setError(getString(R.string.error_user_exists));
+                                        emailWrapper.requestFocus();
+                                    }
+                                    catch(FirebaseAuthWeakPasswordException e) {
+                                        passwordWrapper.setError(getString(R.string.error_weak_password));
+                                        passwordWrapper.requestFocus();
+                                    }
+                                    catch(Exception e) {
+                                        Log.e(TAG, e.getMessage());
+                                    }                                }
                             }
                         });
-            }
-
-            private void checkInputs(String emailInput, String passwordInput) {
-                String email = emailInput;
-                if(!email.endsWith("@gmail.com"))
-                    emailWrapper.setError("Hatalı Mail Adresi");
-
-                String password = passwordInput;
-                if(password.length() < 6)
-                    passwordWrapper.setError("Hatalı Şifre!");
             }
         });
     }

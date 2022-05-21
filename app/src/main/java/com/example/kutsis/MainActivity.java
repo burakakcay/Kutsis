@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,6 +15,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthEmailException;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private TextInputLayout emailWrapper,passwordWrapper;
     private Button loginBtn,signupBtn;
+    private static final String TAG = "MainActivity";
 
 
     @Override
@@ -41,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI(FirebaseUser currentUser) {
         if (currentUser != null) {
             Toast.makeText(this, currentUser.getEmail() + " giriş yaptı", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, SecimActivity.class);
+            Intent intent = new Intent(this, SelectionActivity.class);
             intent.putExtra("user", currentUser);
             startActivity(intent);
         }
@@ -62,8 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String eposta = emailWrapper.getEditText().getText().toString();
                 String sifre = passwordWrapper.getEditText().getText().toString();
-                checkInputs(eposta, sifre);
-                
+
                 mAuth.signInWithEmailAndPassword(eposta, sifre)
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -72,8 +78,27 @@ public class MainActivity extends AppCompatActivity {
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     updateUI(user);
                                 }
-                                else {
-                                    updateUI(null);
+                                if(!task.isSuccessful()) {
+                                    emailWrapper.setError(null);
+                                    passwordWrapper.setError(null);
+                                    try {
+                                        throw task.getException();
+                                    }
+                                    catch (FirebaseAuthEmailException e) {
+                                        emailWrapper.setError(getString(R.string.error_invalid_email));
+                                        emailWrapper.requestFocus();
+                                    }
+                                    catch(FirebaseAuthInvalidCredentialsException e) {
+                                        passwordWrapper.setError(getString(R.string.error_invalid_password));
+                                        passwordWrapper.requestFocus();
+                                    }
+                                    catch (FirebaseAuthInvalidUserException e) {
+                                        emailWrapper.setError(getString(R.string.user_doesnt_exist));
+                                        emailWrapper.requestFocus();
+                                    }
+                                    catch(Exception e) {
+                                        Log.e(TAG, e.getMessage());
+                                    }
                                 }
                             }
                         });
@@ -87,16 +112,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-    
-    private void checkInputs(String emailInput, String passwordInput){
-        
-        String email = emailInput;
-        if(!email.endsWith("@gmail.com"))
-            emailWrapper.setError("Hatalı Mail Adresi!");
-
-        String password = passwordInput;
-        if(password.length() < 6)
-            passwordWrapper.setError("Hatalı Şifre!");
     }
 }
